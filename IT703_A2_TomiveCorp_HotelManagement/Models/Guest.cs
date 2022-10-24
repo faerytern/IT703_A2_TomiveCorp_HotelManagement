@@ -6,10 +6,10 @@ using System.Runtime.Serialization;
 
 namespace IT703_A2_TomiveCorp_HotelManagement.Models
 {
-    public class Customer //: IdentityUser
+    public class Guest //: IdentityUser
     {
         // Identity basic extensions
-        public int CustomerId { get; set; }
+        public int GuestId { get; set; }
         public DateTime? DateOfBirth { get; set; }
         public Gender Gender { get; set; } = Gender.Unknown;
         public byte[]? ProfilePhoto { get; set; }
@@ -32,6 +32,8 @@ namespace IT703_A2_TomiveCorp_HotelManagement.Models
         // Notes and preferences merged into one field
         public List<Note> Notes { get; set; }
 
+        public string AssociatedTravelAgent { get; set; }
+        public string AssociatedCompany { get; set; }
 
         // Address stuff is a headache
 

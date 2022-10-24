@@ -5,7 +5,7 @@
     {
         public int NoteId { get; set; }
         public int CustomerId { get; set; }
-        public Customer Customer { get; set; }
+        public Guest Customer { get; set; }
         public string NoteName { get; set; }
         // Levels include normal for normal users, increased by staff for high profile customers etc
         public NoteType TypeOfNote { get; set; } = NoteType.Default;

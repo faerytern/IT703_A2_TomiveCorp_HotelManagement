@@ -53,7 +53,7 @@ namespace IT703_A2_TomiveCorp_HotelManagement.Models
         public DateTime? DepositRecievedOn { get; set; }
         public string DepositMethod { get; set; } = string.Empty;
         public DateTime? PaymentRecievedOn { get; set; }
-        public string MethodOfPayment { get; set; }
+        public PaymentType PaymentMethod { get; set; }
         /// <summary>
         /// To see if confirmed, check whether it is null
         /// </summary>
@@ -72,6 +72,6 @@ namespace IT703_A2_TomiveCorp_HotelManagement.Models
         public int RoomId { get; set; }
         public Room Room { get; set; }
         public int CustomerId { get; set; }
-        public Customer Customer { get; set; }
+        public Guest Customer { get; set; }
     }
 }
