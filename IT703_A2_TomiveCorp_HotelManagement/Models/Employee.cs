@@ -22,6 +22,6 @@ namespace IT703_A2_TomiveCorp_HotelManagement.Models
         public string Email { get; set; } = string.Empty;
         [DataType(DataType.Password)]
         public string Password { get; set; }
-
+        
     }
 }
