@@ -3,8 +3,6 @@
 
     public class Note
     {
-
-       
         public int NoteId { get; set; }
         public int CustomerId { get; set; }
         public Customer Customer { get; set; }
