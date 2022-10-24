@@ -17,5 +17,11 @@ namespace IT703_A2_TomiveCorp_HotelManagement.Models
         [Range(0,5)]
         [DisplayFormat(DataFormatString = "{0:#.#}")]
         public decimal StarRating { get; set; }
+
+
+        // Relationships
+        public List<Employee> Employees { get; set; }
+        public List<Room> Rooms { get; set; }
+        public List<Booking> Bookings { get; set; }
     }
 }
