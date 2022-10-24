@@ -6,7 +6,7 @@ using System.Runtime.Serialization;
 
 namespace IT703_A2_TomiveCorp_HotelManagement.Models
 {
-    public class Customer : IdentityUser
+    public class Customer //: IdentityUser
     {
         // Identity basic extensions
         public int CustomerId { get; set; }
