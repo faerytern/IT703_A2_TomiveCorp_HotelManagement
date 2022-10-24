@@ -17,13 +17,14 @@ namespace IT703_A2_TomiveCorp_HotelManagement.Models
         // Names
         [StringLength(10)]
         public Title Title { get; set; } = Title.None;
+        // Exchangeable for Identity's UserName attribute
 
         [StringLength(40)]
         public string FirstName { get; set; }
 
         [StringLength(40)]
         public string LastName { get; set; }
-
+        
         public string PreferredName { get; set; }
 
         
@@ -42,7 +43,8 @@ namespace IT703_A2_TomiveCorp_HotelManagement.Models
         public string? StreetNum { get; set; }
         public string? Suburb { get; set; }
         public string? City { get; set; }
-        public int Postcode { get; set; } = 0;
+        [DataType(DataType.PostalCode)]
+        public string? Postcode { get; set; }
 
     }
     
