@@ -17,7 +17,10 @@ namespace IT703_A2_TomiveCorp_HotelManagement.Models
         [Range(0,5)]
         [DisplayFormat(DataFormatString = "{0:#.#}")]
         public decimal StarRating { get; set; }
-
+        /// <summary>
+        /// To figure out whether a customer can add in a car park to their booking, get all the bookings between the date of their stay and compare the amount of car parks booked from that against the total
+        /// </summary>
+        public int NumberOfCarParks { get; set; }
 
         // Relationships
         public List<Employee> Employees { get; set; }
