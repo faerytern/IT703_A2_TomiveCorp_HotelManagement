@@ -12,7 +12,8 @@ namespace IT703_A2_TomiveCorp_HotelManagement.Models
         public int GuestId { get; set; }
         public DateTime? DateOfBirth { get; set; }
         public Gender Gender { get; set; } = Gender.Unknown;
-        public byte[]? ProfilePhoto { get; set; }
+        [DataType(DataType.ImageUrl)]
+        public string? ProfilePhoto { get; set; }
 
         // Names
         [StringLength(10)]

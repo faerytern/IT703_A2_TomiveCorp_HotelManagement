@@ -1,0 +1,137 @@
+﻿@model IEnumerable<IT703_A2_TomiveCorp_HotelManagement.Models.Booking>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MethodOfBooking)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ArrivalDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ArrivalTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DepartureDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DepartureTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Checked_In)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Checked_Out)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumberOfAdults)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumberOfChildren)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SpecialRequest)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CarPark)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DepositRecievedOn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DepositMethod)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PaymentRecievedOn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PaymentMethod)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ConfirmedOn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Room)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MethodOfBooking)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ArrivalDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ArrivalTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DepartureDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DepartureTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Checked_In)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Checked_Out)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumberOfAdults)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumberOfChildren)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SpecialRequest)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CarPark)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DepositRecievedOn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DepositMethod)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PaymentRecievedOn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PaymentMethod)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ConfirmedOn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Room.RoomId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Customer.GuestId)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.BookingId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.BookingId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.BookingId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

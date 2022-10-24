@@ -14,8 +14,8 @@ namespace IT703_A2_TomiveCorp_HotelManagement.Models
         public decimal RoomRate { get; set; }
         [DataType(DataType.Currency)]
         public decimal DefaultRoomRate { get; set; }
-        public byte[] PreviewImage { get; set; }
-        public List<byte[]> RoomImages { get; set; }
+        [DataType(DataType.ImageUrl)]
+        public string PreviewImage { get; set; }
     }
     public enum RoomType
     {

@@ -12,24 +12,24 @@ namespace IT703_A2_TomiveCorp_HotelManagement.Models
         /// Used by Customer/Guest when making a booking to say the day they will arrive on
         /// </summary>
         [DataType(DataType.Date)]
-        public DateOnly ArrivalDate { get; set; }
+        public DateTime ArrivalDate { get; set; }
         
         /// <summary>
         /// Optional for user to provide the time they will come in on as Poni requested
         /// </summary>
         [DataType(DataType.Time)]
-        public TimeOnly? ArrivalTime { get; set; }
+        public DateTime? ArrivalTime { get; set; }
         /// <summary>
         /// Used by Customer/Guest when making a booking to represent their last day
         /// </summary>
         [DataType(DataType.Date)]
-        public DateOnly DepartureDate { get; set; }
+        public DateTime DepartureDate { get; set; }
 
         /// <summary>
         /// Optional for user to provide the time they will leave as Poni requested
         /// </summary>
         [DataType(DataType.Time)]
-        public TimeOnly? DepartureTime { get; set; }
+        public DateTime? DepartureTime { get; set; }
 
         /// <summary>
         /// Used by employees to check a guest in. 
@@ -73,5 +73,6 @@ namespace IT703_A2_TomiveCorp_HotelManagement.Models
         public Room Room { get; set; }
         public int CustomerId { get; set; }
         public Guest Customer { get; set; }
+        public List<Bill> Bills { get; set; }
     }
 }

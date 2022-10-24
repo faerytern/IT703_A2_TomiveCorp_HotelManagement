@@ -9,6 +9,7 @@ namespace IT703_A2_TomiveCorp_HotelManagement.Models
         public string Location { get; set; }
         [DataType(DataType.PhoneNumber)]
         public string Phone { get; set; }
-        public byte[] PreviewImage { get; set; }
+        [DataType(DataType.ImageUrl)]
+        public string PreviewImage { get; set; }
     }
 }
