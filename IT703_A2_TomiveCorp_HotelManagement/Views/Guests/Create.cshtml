@@ -19,7 +19,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="Gender" class="control-label"></label>
-                @Html.DropDownList("Gender",Html.GetEnumSelectList<Gender>())
+                <select asp-for="Gender" asp-items="Html.GetEnumSelectList<Gender>()" class="form-control"></select>
                 <span asp-validation-for="Gender" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -29,7 +29,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="Title" class="control-label"></label>
-                @Html.DropDownList("Title",Html.GetEnumSelectList<Title>())
+                <select asp-for="Title" asp-items="Html.GetEnumSelectList<Title>()" class="form-control"></select>
                 <span asp-validation-for="Title" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -59,7 +59,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="AddressType" class="control-label"></label>
-                @Html.DropDownList("AddressType",Html.GetEnumSelectList<AddressType>())
+                <select asp-for="AddressType" asp-items="Html.GetEnumSelectList<AddressType>()" class="form-control"></select>
                 <span asp-validation-for="AddressType" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -99,5 +99,7 @@
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    }
