@@ -10,13 +10,13 @@ namespace IT703_A2_TomiveCorp_HotelManagement.Models
     {
         // Identity basic extensions
         public int GuestId { get; set; }
-        public DateTime? DateOfBirth { get; set; }
+        [DataType(DataType.Date)]
+        public DateTime DateOfBirth { get; set; }
         public Gender Gender { get; set; } = Gender.Unknown;
         [DataType(DataType.ImageUrl)]
         public string? ProfilePhoto { get; set; }
 
         // Names
-        [StringLength(10)]
         public Title Title { get; set; } = Title.None;
         // Exchangeable for Identity's UserName attribute
 
@@ -25,16 +25,15 @@ namespace IT703_A2_TomiveCorp_HotelManagement.Models
 
         [StringLength(40)]
         public string LastName { get; set; }
-        
-        public string PreferredName { get; set; }
+        public string? PreferredName { get; set; }
 
         
         // Defined requirements
         // Notes and preferences merged into one field
-        public List<Note> Notes { get; set; }
+        public List<Note>? Notes { get; set; }
 
-        public string AssociatedTravelAgent { get; set; }
-        public string AssociatedCompany { get; set; }
+        public string? AssociatedTravelAgent { get; set; }
+        public string? AssociatedCompany { get; set; }
 
         // Address stuff is a headache
 
